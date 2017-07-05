@@ -1,0 +1,143 @@
+Using TensorFlow backend.
+reading and preprocessing the data...
+____________________________________________________________________________________________________
+Layer (type)                     Output Shape          Param #     Connected to                     
+====================================================================================================
+convolution2d_1 (Convolution2D)  (None, 38, 158, 3)    30          convolution2d_input_1[0][0]      
+____________________________________________________________________________________________________
+activation_1 (Activation)        (None, 38, 158, 3)    0           convolution2d_1[0][0]            
+____________________________________________________________________________________________________
+maxpooling2d_1 (MaxPooling2D)    (None, 19, 79, 3)     0           activation_1[0][0]               
+____________________________________________________________________________________________________
+convolution2d_2 (Convolution2D)  (None, 16, 76, 6)     294         maxpooling2d_1[0][0]             
+____________________________________________________________________________________________________
+activation_2 (Activation)        (None, 16, 76, 6)     0           convolution2d_2[0][0]            
+____________________________________________________________________________________________________
+maxpooling2d_2 (MaxPooling2D)    (None, 8, 38, 6)      0           activation_2[0][0]               
+____________________________________________________________________________________________________
+convolution2d_3 (Convolution2D)  (None, 6, 36, 12)     660         maxpooling2d_2[0][0]             
+____________________________________________________________________________________________________
+activation_3 (Activation)        (None, 6, 36, 12)     0           convolution2d_3[0][0]            
+____________________________________________________________________________________________________
+maxpooling2d_3 (MaxPooling2D)    (None, 3, 18, 12)     0           activation_3[0][0]               
+____________________________________________________________________________________________________
+convolution2d_4 (Convolution2D)  (None, 1, 16, 6)      654         maxpooling2d_3[0][0]             
+____________________________________________________________________________________________________
+activation_4 (Activation)        (None, 1, 16, 6)      0           convolution2d_4[0][0]            
+____________________________________________________________________________________________________
+flatten_1 (Flatten)              (None, 96)            0           activation_4[0][0]               
+____________________________________________________________________________________________________
+dense_1 (Dense)                  (None, 48)            4656        flatten_1[0][0]                  
+____________________________________________________________________________________________________
+activation_5 (Activation)        (None, 48)            0           dense_1[0][0]                    
+____________________________________________________________________________________________________
+dropout_1 (Dropout)              (None, 48)            0           activation_5[0][0]               
+____________________________________________________________________________________________________
+dense_2 (Dense)                  (None, 24)            1176        dropout_1[0][0]                  
+____________________________________________________________________________________________________
+activation_6 (Activation)        (None, 24)            0           dense_2[0][0]                    
+____________________________________________________________________________________________________
+dropout_2 (Dropout)              (None, 24)            0           activation_6[0][0]               
+____________________________________________________________________________________________________
+dense_3 (Dense)                  (None, 12)            300         dropout_2[0][0]                  
+____________________________________________________________________________________________________
+activation_7 (Activation)        (None, 12)            0           dense_3[0][0]                    
+____________________________________________________________________________________________________
+dropout_3 (Dropout)              (None, 12)            0           activation_7[0][0]               
+____________________________________________________________________________________________________
+dense_4 (Dense)                  (None, 1)             13          dropout_3[0][0]                  
+____________________________________________________________________________________________________
+activation_8 (Activation)        (None, 1)             0           dense_4[0][0]                    
+====================================================================================================
+Total params: 7,783
+Trainable params: 7,783
+Non-trainable params: 0
+____________________________________________________________________________________________________
+saving the model...
+training...
+Train on 10611 samples, validate on 2653 samples
+Epoch 1/25
+Epoch 00000: val_loss improved from inf to 0.03145, saving model to model.h5
+35s - loss: 0.0330 - val_loss: 0.0315
+Epoch 2/25
+Epoch 00001: val_loss improved from 0.03145 to 0.02429, saving model to model.h5
+34s - loss: 0.0296 - val_loss: 0.0243
+Epoch 3/25
+Epoch 00002: val_loss improved from 0.02429 to 0.02388, saving model to model.h5
+34s - loss: 0.0268 - val_loss: 0.0239
+Epoch 4/25
+Epoch 00003: val_loss improved from 0.02388 to 0.02070, saving model to model.h5
+34s - loss: 0.0249 - val_loss: 0.0207
+Epoch 5/25
+Epoch 00004: val_loss improved from 0.02070 to 0.01971, saving model to model.h5
+35s - loss: 0.0241 - val_loss: 0.0197
+Epoch 6/25
+Epoch 00005: val_loss improved from 0.01971 to 0.01891, saving model to model.h5
+35s - loss: 0.0231 - val_loss: 0.0189
+Epoch 7/25
+Epoch 00006: val_loss did not improve
+35s - loss: 0.0232 - val_loss: 0.0196
+Epoch 8/25
+Epoch 00007: val_loss improved from 0.01891 to 0.01798, saving model to model.h5
+36s - loss: 0.0218 - val_loss: 0.0180
+Epoch 9/25
+Epoch 00008: val_loss improved from 0.01798 to 0.01704, saving model to model.h5
+35s - loss: 0.0212 - val_loss: 0.0170
+Epoch 10/25
+Epoch 00009: val_loss did not improve
+35s - loss: 0.0213 - val_loss: 0.0177
+Epoch 11/25
+Epoch 00010: val_loss improved from 0.01704 to 0.01675, saving model to model.h5
+36s - loss: 0.0213 - val_loss: 0.0167
+Epoch 12/25
+Epoch 00011: val_loss improved from 0.01675 to 0.01642, saving model to model.h5
+36s - loss: 0.0201 - val_loss: 0.0164
+Epoch 13/25
+Epoch 00012: val_loss improved from 0.01642 to 0.01555, saving model to model.h5
+36s - loss: 0.0205 - val_loss: 0.0155
+Epoch 14/25
+Epoch 00013: val_loss did not improve
+36s - loss: 0.0202 - val_loss: 0.0158
+Epoch 15/25
+Epoch 00014: val_loss did not improve
+36s - loss: 0.0195 - val_loss: 0.0161
+Epoch 16/25
+Epoch 00015: val_loss improved from 0.01555 to 0.01551, saving model to model.h5
+36s - loss: 0.0195 - val_loss: 0.0155
+Epoch 17/25
+Epoch 00016: val_loss did not improve
+36s - loss: 0.0199 - val_loss: 0.0165
+Epoch 18/25
+Epoch 00017: val_loss did not improve
+36s - loss: 0.0194 - val_loss: 0.0157
+Epoch 19/25
+Epoch 00018: val_loss did not improve
+36s - loss: 0.0195 - val_loss: 0.0164
+Epoch 20/25
+Epoch 00019: val_loss did not improve
+36s - loss: 0.0186 - val_loss: 0.0155
+Epoch 21/25
+Epoch 00020: val_loss improved from 0.01551 to 0.01511, saving model to model.h5
+36s - loss: 0.0193 - val_loss: 0.0151
+Epoch 22/25
+Epoch 00021: val_loss did not improve
+36s - loss: 0.0187 - val_loss: 0.0162
+Epoch 23/25
+Epoch 00022: val_loss did not improve
+36s - loss: 0.0180 - val_loss: 0.0155
+Epoch 24/25
+Epoch 00023: val_loss did not improve
+36s - loss: 0.0182 - val_loss: 0.0163
+Epoch 25/25
+Epoch 00024: val_loss did not improve
+36s - loss: 0.0177 - val_loss: 0.0152
+finished in 0:15:02
+saving history...
+
+f i n i s h e d!
+
+Exception ignored in: <bound method BaseSession.__del__ of <tensorflow.python.client.session.Session object at 0x000000000B3EC9E8>>
+Traceback (most recent call last):
+  File "C:\Users\GALVEZ\Anaconda3\lib\site-packages\tensorflow\python\client\session.py", line 581, in __del__
+UnboundLocalError: local variable 'status' referenced before assignment
+[Finished in 917.6s]
