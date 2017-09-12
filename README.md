@@ -1,6 +1,23 @@
-# Behavioral Cloning Project
-    Author: José Javier Gálvez Gamboa
-    Date: 2017.01.29
+# Use Deep Learning to Clone Driving Behavior
+
+Project for the Self-Driving Car Engineer Nanodegree Program. Date: 2017.01.29
+
+---
+
+## Overview
+
+I trained a deep learning network to drive a car like me!
+
+Using the driving simulator from Udacity I drove the car around a track, collected data and then trained deep neural network to do the driving autonomously. A video of the result is shown below.
+
+[![](https://img.youtube.com/vi/gQiCiNqdO7I/0.jpg)](https://www.youtube.com/watch?v=gQiCiNqdO7I)
+
+
+## Dependencies
+
+* TensorFlow
+* Keras
+* [CarND Term1 Starter Kit](https://github.com/udacity/CarND-Term1-Starter-Kit)
 
 
 ## Training, validation and test set
